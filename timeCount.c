@@ -32,8 +32,8 @@ int main() {
 	}
 	stop = clock();		/* 停止计时 */
 	duration = ((double)(stop - start)) / CLK_TCK;
-	printf("ticks1 = %f\n", (double)(stop - start));
-	printf("duration1 = %6.2e\n", duration);
+	printf("ticks2 = %f\n", (double)(stop - start));
+	printf("duration2 = %6.2e\n", duration);
 
 	return 0;
 }
