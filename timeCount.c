@@ -1,25 +1,25 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 #include<time.h>
 void MyFunction();
 clock_t start, stop;
-/* clock_tÊÇclock()º¯Êı·µ»ØµÄ±äÁ¿ÀàĞÍ */
+/* clock_tæ˜¯clock()å‡½æ•°è¿”å›çš„å˜é‡ç±»å‹ */
 double duration;
-/* ¼ÇÂ¼±»²âº¯ÊıÔËĞĞÊ±¼ä£¬ÒÔÃëÎªµ¥Î» */
+/* è®°å½•è¢«æµ‹å‡½æ•°è¿è¡Œæ—¶é—´ï¼Œä»¥ç§’ä¸ºå•ä½ */
 int main() {
 	int N = 10000;
-	/* ²»ÔÚ²âÊÔ·¶Î§ÄÚµÄ×¼±¸¹¤×÷Ğ´ÔÚclock()µ÷ÓÃÖ®Ç°*/
-	start = clock();	/* ¿ªÊ¼¼ÆÊ± */
-	MyFunction(N);		/* °Ñ±»²âº¯Êı¼ÓÔÚÕâÀï */
-	stop = clock();		/* Í£Ö¹¼ÆÊ± */
+	/* ä¸åœ¨æµ‹è¯•èŒƒå›´å†…çš„å‡†å¤‡å·¥ä½œå†™åœ¨clock()è°ƒç”¨ä¹‹å‰*/
+	start = clock();	/* å¼€å§‹è®¡æ—¶ */
+	MyFunction(N);		/* æŠŠè¢«æµ‹å‡½æ•°åŠ åœ¨è¿™é‡Œ */
+	stop = clock();		/* åœæ­¢è®¡æ—¶ */
 	duration = ((double)(stop - start)) / CLK_TCK;
-	/* ¼ÆËãÔËĞĞÊ±¼ä */
-	/* ÆäËû²»ÔÚ²âÊÔ·¶Î§µÄ´¦ÀíĞ´ÔÚºóÃæ£¬ÀıÈçÊä³ödurationµÄÖµ */
+	/* è®¡ç®—è¿è¡Œæ—¶é—´ */
+	/* å…¶ä»–ä¸åœ¨æµ‹è¯•èŒƒå›´çš„å¤„ç†å†™åœ¨åé¢ï¼Œä¾‹å¦‚è¾“å‡ºdurationçš„å€¼ */
 	printf("%d", duration);
 	return 0;
 }
 void MyFunction(int N) {
 	double j = 0;
-	//Ëæ±ãĞ´Ğ´
+	//éšä¾¿å†™å†™
 	for (int i = 0; i < N; i++)
 	{
 		for (int k = 0; k < N; k++)
