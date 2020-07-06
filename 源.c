@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
+﻿#define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -8,10 +8,10 @@ void PrintN2(int N);
 int main() {
 	int N;
 	scanf("%d", &N);
-	printf("ѭ��:\n");
+	printf("函数1：循环:\n");
 	PrintN1(N);
 	system("pause");
-	printf("�ݹ�:\n");
+	printf("递归:\n");
 	PrintN2(N);
 	return 0;
 }
