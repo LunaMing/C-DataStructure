@@ -6,7 +6,7 @@ double duration;
 #define MAXN 100	/*多项式最大项数，即多项式阶数+1*/
 double f1(int n, double a[], double x);
 double f2(int n, double a[], double x);
-#define MAXK 1		/*试验次数*/
+#define MAXK 10000		/*试验次数*/
 
 int main() {
 	double a[MAXN];	/*存储多项式的系数*/
