@@ -138,6 +138,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="MaxSubseqSum.cpp" />
     <ClCompile Include="PrintN.c" />
     <ClCompile Include="timeCount.c" />
   </ItemGroup>
