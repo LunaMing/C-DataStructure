@@ -8,7 +8,7 @@ double f1(int n, double a[], double x);
 double f2(int n, double a[], double x);
 #define MAXK 10000		/*试验次数*/
 
-int __main() {
+int __main_timeCount() {
 	double a[MAXN];	/*存储多项式的系数*/
 	for (int i = 0; i < MAXN; i++)
 	{

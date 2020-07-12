@@ -5,7 +5,7 @@
 void PrintN1(int N);
 void PrintN2(int N);
 
-int __main() {
+int __main_PrintN() {
 	int N;
 	scanf("%d", &N);
 	printf("函数1：循环:\n");
