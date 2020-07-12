@@ -103,6 +103,22 @@ int MaxSubseqSum3(vector<int> A)
     return DivideAndConquer(A, 0, N - 1);
 }
 
+/*算法4：在线处理*/
+int MaxSubseqSum4(vector<int> A) {
+    int N = A.size();
+    int ThisSum, MaxSum; int i;
+    ThisSum = MaxSum = 0; 
+    for (i = 0; i < N; i++) 
+    { 
+		ThisSum += A[i]; /* 向右累加*/
+        if (ThisSum > MaxSum) 
+            MaxSum = ThisSum; /* 发现更大和则更新当前结果*/ 
+        else if (ThisSum < 0) /* 如果当前子列和为负*/ 
+            ThisSum = 0; /* 则不可能使后面的部分和增大，抛弃之*/ 
+	}
+	return MaxSum;
+}
+
 int main() {
     int N;
     cin >> N;
@@ -112,6 +128,6 @@ int main() {
         cin >> temp;
         list.push_back(temp);
     }
-    cout << MaxSubseqSum3(list) << endl;;
+    cout << MaxSubseqSum4(list) << endl;;
     return 0;
 }
